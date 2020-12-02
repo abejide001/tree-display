@@ -1,9 +1,10 @@
 import React from 'react'
 import { Button, Card } from "react-bootstrap";
+import style from './styles';
 
 const SingleTreeDisplay = ({ tree, hideImage }) => {
     return (
-        <Card style={{ width: "18rem", margin: "50px" }}>
+        <Card style={style}>
             <Card.Img variant="top" src={tree.image} alt="tree" />
             <Card.Body>
                 <Card.Title>{tree.name}</Card.Title>

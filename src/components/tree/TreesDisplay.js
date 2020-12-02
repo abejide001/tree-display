@@ -1,9 +1,10 @@
 import React from 'react'
 import { Button, Card } from "react-bootstrap";
+import style from './styles';
 
 const TreesDisplay = ({ tree, showImage }) => {
     return (
-        <Card style={{ width: "18rem", margin: "50px" }}>
+        <Card style={style}>
             <Card.Body>
                 <Card.Title>{tree.name}</Card.Title>
                 <Card.Text>{tree.species_name}</Card.Text>

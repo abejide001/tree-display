@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Spinner } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { useFetch } from "../hooks/useFetch"
-import SingleTreeDisplay from "./SingleTreeDisplay";
-import TreesDisplay from "./TreesDisplay";
+import SingleTreeDisplay from "../components/tree/SingleTreeDisplay";
+import TreesDisplay from "../components/tree/TreesDisplay";
+import Spinner from "../components/common/Spinner"
 
-export const TreeDisplay = () => {
+export const Home = () => {
   const { getTree } = useFetch("https://s3.eu-central-1.amazonaws.com/ecosia-frontend-developer/trees.json")
   const [tree, setTree] = useState('')
 
@@ -36,5 +37,5 @@ export const TreeDisplay = () => {
   );
 };
 
-export default TreeDisplay;
+export default Home;
 

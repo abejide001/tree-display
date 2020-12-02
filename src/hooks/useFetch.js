@@ -4,8 +4,12 @@ import axios from "axios";
 export const useFetch = (url) => {
     const [getTree, setGetTree] = useState([]);
     async function getTrees() {
-        const response = await axios.get(url);
-        setGetTree(response.data);
+        try {
+            const response = await axios.get(url);
+            setGetTree(response.data);
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     useEffect(() => {
