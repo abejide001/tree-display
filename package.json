@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --setupFilesAfterEnv='./src/__tests__/setup/setupEnzyme.js' --testPathIgnorePatterns=./src/__tests__/setup/setupEnzyme.js",
     "eject": "react-scripts eject",
-    "coverage": "npm test -- --coverage",
+    "coverage": "npm test -- --coverage --watchAll",
     "lint": "eslint src/**/*.js"
   },
   "eslintConfig": {
