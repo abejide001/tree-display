@@ -1,9 +1,7 @@
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme';
 import { Button, Card } from "react-bootstrap";
-import TreesDisplay from '../components/tree/TreesDisplay';
+import TreesDisplay from '../../../components/tree/TreesDisplay';
 
-Enzyme.configure({ adapter: new Adapter() })
 
 let wrapper;
 let cardWrapper;
@@ -23,9 +21,8 @@ beforeEach(() => {
     cardWrapper = wrapper.dive().dive()
 });
 
-describe("Single Tree Componenet", () => {
+describe("Trees Display Componenet", () => {
     it("should have one Card.Title element", () => {
-        console.log(cardWrapper)
         const cardTitle = cardWrapper.find(Card.Title)
         expect(cardTitle.length).toBe(1)
     })

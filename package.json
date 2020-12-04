@@ -5,10 +5,10 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^1.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
-    "enzyme": "^3.11.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
@@ -18,9 +18,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --setupFilesAfterEnv='./src/__tests__/setup/setupEnzyme.js' --testPathIgnorePatterns=./src/__tests__/setup/setupEnzyme.js",
     "eject": "react-scripts eject",
-    "coverage": "npm test -- --coverage"
+    "coverage": "npm test -- --coverage",
+    "lint": "eslint src/**/*.js"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +42,9 @@
     ]
   },
   "devDependencies": {
+    "axios-mock-adapter": "^1.19.0",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "react-test-renderer": "^15.5.0"
+    "react-test-renderer": "^17.0.1"
   }
 }

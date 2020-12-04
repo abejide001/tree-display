@@ -6,7 +6,7 @@ import TreesDisplay from "../components/tree/TreesDisplay";
 import Spinner from "../components/common/Spinner"
 
 export const Home = () => {
-  const { getTree } = useFetch("https://s3.eu-central-1.amazonaws.com/ecosia-frontend-developer/trees.json")
+  const { getTree } = useFetch("https://s3.eu-central-1.amazonaws.com/ecosia-frontend-developer/trees.json", [])
   const [tree, setTree] = useState('')
 
   const showImage = (singleTree) => {
