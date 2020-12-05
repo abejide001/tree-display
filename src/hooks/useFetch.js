@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const useFetch = (url, initialValue) => {
   const [getTree, setGetTree] = useState(initialValue);
-  async function getTrees() {
+  const getTrees = async () => {
     try {
       const response = await axios.get(url);
       setGetTree(response.data);

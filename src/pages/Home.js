@@ -7,7 +7,7 @@ import Spinner from '../components/common/Spinner';
 
 export const Home = () => {
   const { getTree } = useFetch(
-    'https://s3.eu-central-1.amazonaws.com/ecosia-frontend-developer/trees.json',
+    process.env.REACT_APP_URL,
     [],
   );
   const [trees, setTrees] = useState('');

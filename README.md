@@ -3,6 +3,10 @@
 This project shows several beautiful trees
 ![image](https://user-images.githubusercontent.com/6943256/101182883-9cba5580-3646-11eb-9ea0-d37cbcdb1327.png)
 
+## Website
+
+[Tree Showcase](https://tree-display.netlify.com)
+
 ## Prerequisites
 
 To work with this project you need to have the following installed on your local machine
@@ -13,7 +17,7 @@ To work with this project you need to have the following installed on your local
 
 ```bash
 $ git clone https://github.com/abejide001/tree-display
-$ cd tree-display
+cd tree-display
 
 $ npm i
 $ npm start
@@ -22,6 +26,9 @@ $ npm start
 ## Test
 
 ```bash
-$ npm test
+npm test
 ```
 
+## Note
+
+On mobile, scroll to the bottom of the page, to see the image
