@@ -1,6 +1,9 @@
 # Tree display
 
 This project shows several beautiful trees
+
+## [![Build Status](https://travis-ci.org/abejide001/tree-display.svg?branch=develop)](https://travis-ci.org/abejide001/tree-display)
+
 ![image](https://user-images.githubusercontent.com/6943256/101182883-9cba5580-3646-11eb-9ea0-d37cbcdb1327.png)
 
 ## Website
