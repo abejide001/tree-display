@@ -1,10 +1,20 @@
 language: node_js
 node_js:
-  - 12
+  - 'stable'
 cache:
   directories:
     - node_modules
+env:
+  - global:
+      - CC_TEST_REPORTER_ID=2a6848aecc7a46f0884fdc30f47f84edc9969a256c347ca056e8f1bda16328fc
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - npm test
-  - npm run coverage
 
+after_script:
+    - ./cc-test-reporter after-build -t "lcov" --exit-code $TRAVIS_TEST_RESULT
