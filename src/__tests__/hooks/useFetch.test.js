@@ -1,6 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
+import { act } from 'react-test-renderer';
 import useFetch from '../../hooks/useFetch';
 
 describe('useFetch', () => {
@@ -16,7 +17,10 @@ describe('useFetch', () => {
     expect(result.current.getTree).toEqual([]);
     expect(result.current.getTree).toHaveLength(0);
 
-    await waitForNextUpdate();
+    await act(async () => {
+      await waitForNextUpdate();
+    });
+
     expect(result.current.getTree).toEqual('response');
   });
 });

@@ -8,7 +8,7 @@ beforeEach(() => {
   wrapper = shallow(<Spinner />);
 });
 
-describe('Home Component', () => {
+describe('Spinner Component', () => {
   it('should have one img element', () => {
     const img = wrapper.find('img');
     expect(img.length).toBe(1);
