@@ -10,6 +10,7 @@ const baseProps = {
   tree: {
     name: 'Baobab',
     species_name: '',
+    image:''
   },
   hideImage: jest.fn(),
 };
